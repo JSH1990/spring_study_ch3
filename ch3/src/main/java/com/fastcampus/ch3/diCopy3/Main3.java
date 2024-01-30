@@ -7,26 +7,16 @@ import java.util.Map;
 import java.util.Properties;
 
 
-class Car{}
-class SportsCar extends Car{}
-class Truck extends Car{}
-class Engine{}
-class door extends Engine{}
-
 class AppContext{
     Map map; //객체저장소
 
-    AppContext() throws Exception { //객체저장소 클래스
-        Properties p = new Properties(); //(String, String)
-        p.load(new FileReader("config.txt"));
-
-        map = new HashMap(p); //객체들을 담을 map을 생성(String, Object)
-
-        //반복문으로 클래스 이름을 얻어서 객체를 얻어 객체를 생성해서 다시 map에 저장
-        for (Object key : map.keySet()){ //for문을 통해 파일의 키들을 이용해 객체생성후 저장소에 보관
-            Class clazz = Class.forName((String)map.get(key));
-            map.put(key, clazz.newInstance()); //클래스 이름 가져와서 map에 저장
+    AppContext() throws Exception {
+        map = new HashMap();
+        doComponentScan();
         }
+
+    private void doComponentScan(){
+
     }
 
     Object getBean(String key) {
