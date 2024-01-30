@@ -19,6 +19,7 @@ public class HomeController {
 	//테스트
 	//두번째 테스트
 	//세번째 테스트
+	//터미널테스트
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	/**
