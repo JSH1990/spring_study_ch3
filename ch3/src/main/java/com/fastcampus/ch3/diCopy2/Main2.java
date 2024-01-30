@@ -16,6 +16,8 @@ class door extends Engine{}
 class AppContext{
     Map map; //객체저장소
 
+    //우리집 커밋 잘됨?
+
     AppContext() throws Exception { //객체저장소 클래스
         Properties p = new Properties();
         p.load(new FileReader("config.txt"));
