@@ -22,6 +22,7 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, HttpServletRequest request, Model model) {
 		// 원래는 request.getServletContext()지만, 컨트롤러는 HttpServlet을 상속받지 않아서 아래와 같이 해야함.
+		//테스트1
 		ServletContext sc = request.getSession().getServletContext(); // ApplicationContextFacade
 		WebApplicationContext rootAC = WebApplicationContextUtils.getWebApplicationContext(sc); // Root AC
 

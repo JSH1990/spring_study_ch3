@@ -44,6 +44,7 @@ public class ApplicationContextTest {
         System.out.println("car = " + car);
         System.out.println("car2 = " + car2);
 
+        //테스트1
         System.out.println("ac.getBeanDefinitionNames() = " + Arrays.toString(ac.getBeanDefinitionNames())); // 정의된 빈의 이름을 배열로 반환
         System.out.println("ac.getBeanDefinitionCount() = " + ac.getBeanDefinitionCount()); // 정의된 빈의 개수를 반환
 
